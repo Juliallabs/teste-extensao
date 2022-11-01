@@ -6,15 +6,12 @@ enum sensor {
     //% block="IR"
     IR
 }
-
-/**
- * Leitura Analogica EletroBlocks
- */
-//% color="#2c3e50" weight=10
 namespace EletroBlocks {
     /**
+     * Leitura Analogica para blocos EletroBlocks
      */
     //% blockId=leituraAnalogica="ping sensor %sensor|porta%porta"
+    //% block= "teste"
     export function ping(trig: DigitalPin, unit: sensor, maxCmDistance = 500): number {
         return 1
     }
