@@ -1,7 +1,21 @@
-let angulo = 0
-basic.forever(function on_forever() {
-    
-    angulo = Math.map(Math.abs(pins.analogReadPin(AnalogPin.P0) / 10), 0, 100, 0, 270)
-    pins.servoWritePin(AnalogPin.P14, angulo)
-    serial.writeValue("x", angulo)
-})
+enum sensor {
+    //% block="POTENCIOMETRO"
+    POTENCIOMETRO,
+    //% block="LDR"
+    LDR,
+    //% block="IR"
+    IR
+}
+
+/**
+ * Leitura Analogica EletroBlocks
+ */
+//% color="#2c3e50" weight=10
+namespace EletroBlocks {
+    /**
+     */
+    //% blockId=leituraAnalogica="ping sensor %sensor|porta%porta"
+    export function ping(trig: DigitalPin, unit: sensor, maxCmDistance = 500): number {
+        return 1
+    }
+}
